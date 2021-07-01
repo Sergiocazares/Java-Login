@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -22,6 +23,9 @@ import java.util.Collections;
 public class AppUser implements UserDetails {
 
     @Id
+    @SequenceGenerator(
+            name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1
+    )
     private Long id;
     private String name;
     private String username;
