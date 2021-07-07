@@ -13,6 +13,7 @@ public class AppUserService implements UserDetailsService {
     private final AppUserRepository appUserRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        return appUserRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException(""));
     }
 }
