@@ -16,4 +16,8 @@ public class RegistrationRequest {
     private final String email;
     private final String password;
 
+    public RegistrationRequest(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }
