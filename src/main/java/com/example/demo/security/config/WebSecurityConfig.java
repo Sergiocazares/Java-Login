@@ -1,5 +1,6 @@
 package com.example.demo.security.config;
 
+import com.example.demo.appuser.AppUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @AllArgsConstructor
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    private final AppUserService appUserService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
