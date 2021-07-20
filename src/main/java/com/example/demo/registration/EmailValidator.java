@@ -1,4 +1,7 @@
 package com.example.demo.registration;
 
-public class EmailValidator {
+import java.util.function.Predicate;
+
+public class EmailValidator implements Predicate<String> {
+
 }
