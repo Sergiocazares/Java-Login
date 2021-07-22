@@ -28,8 +28,8 @@ public class AppUser implements UserDetails {
             strategy = GenerationType.SEQUENCE, generator = "student_sequence"
     )
     private Long id;
-    private String name;
-    private String username;
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
@@ -39,8 +39,8 @@ public class AppUser implements UserDetails {
 
     public AppUser(Long id, String name, String username, String email, String password, AppUserRole appUserRole, Boolean locked, Boolean enabled) {
         this.id = id;
-        this.name = name;
-        this.username = username;
+        this.name = firstName;
+        this.username = lastName;
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
