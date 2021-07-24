@@ -15,6 +15,7 @@ public class RegistrationRequest {
     private final String lastName;
     private final String email;
     private final String password;
+    public String getLastName;
 
     public RegistrationRequest(String firstName, String lastName) {
         this.firstName = firstName;
@@ -24,5 +25,8 @@ public class RegistrationRequest {
     }
 
     public String getEmail() {
+    }
+
+    public Object getFirstName() {
     }
 }
