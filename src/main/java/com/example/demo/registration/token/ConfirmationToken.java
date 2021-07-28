@@ -17,4 +17,11 @@ public class ConfirmationToken {
     private LocalDateTime createdAt;
     private LocalDateTime expiredAt;
     private LocalDateTime confirmAt;
+
+    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, LocalDateTime confirmAt){
+        this.token = token;
+        this.createdAt = createdAt;
+        this.expiredAt = expiredAt;
+        this.confirmAt = confirmAt;
+    }
 }
