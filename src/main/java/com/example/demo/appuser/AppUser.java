@@ -94,4 +94,7 @@ public class AppUser implements UserDetails {
 
     public String getEmail() {
     }
+
+    public void setPassword(String encodedPassword) {
+    }
 }
