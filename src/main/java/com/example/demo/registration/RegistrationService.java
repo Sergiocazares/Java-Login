@@ -14,6 +14,10 @@ public class RegistrationService {
     private final AppUserService appUserService;
     private EmailValidator emailValidator;
 
+    public RegistrationService(AppUserService appUserService) {
+        this.appUserService = appUserService;
+    }
+
     public String register(RegistrationRequest request){
         boolean isValidEmail = emailValidator.test(request.getEmail());
         if (!isValidEmail) {
