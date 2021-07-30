@@ -29,4 +29,7 @@ public class RegistrationRequest {
 
     public Object getFirstName() {
     }
+
+    public Object getLastName() {
+    }
 }
