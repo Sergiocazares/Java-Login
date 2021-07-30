@@ -21,6 +21,7 @@ import java.util.Collections;
 public class AppUser implements UserDetails {
 
     private final Object name;
+    private final String username;
     @SequenceGenerator(
             name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1
     )
@@ -32,7 +33,7 @@ public class AppUser implements UserDetails {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
+    private final String password;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked = false;
