@@ -20,6 +20,7 @@ import java.util.Collections;
 
 public class AppUser implements UserDetails {
 
+    private final Object name;
     @SequenceGenerator(
             name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1
     )
@@ -39,7 +40,7 @@ public class AppUser implements UserDetails {
 
     public AppUser(Long id, String name, String username, String email, String password, AppUserRole appUserRole, Boolean locked, Boolean enabled) {
         this.id = id;
-        this.name = firstName;
+        this.name = null;
         this.username = lastName;
         this.email = email;
         this.password = password;
