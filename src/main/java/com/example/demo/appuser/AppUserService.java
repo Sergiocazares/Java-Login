@@ -15,6 +15,10 @@ public class AppUserService implements UserDetailsService {
     private final AppUserRepository appUserRepository = null;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    public AppUserService(BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         return appUserRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException(String.format(USER_NOT_FOUND_MSG, email)));
