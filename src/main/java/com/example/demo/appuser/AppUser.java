@@ -102,6 +102,7 @@ public class AppUser implements UserDetails {
     }
 
     public String getEmail() {
+        return null;
     }
 
     public void setPassword(String encodedPassword) {
