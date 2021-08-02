@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 public class ConfirmationToken {
 
     @SequenceGenerator(
-            name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1
+            name = "confirmation_token_sequence", sequenceName = "confirmation_token_sequence", allocationSize = 1
     )
     @Id
     @GeneratedValue(
-            strategy = GenerationType.SEQUENCE, generator = "student_sequence"
+            strategy = GenerationType.SEQUENCE, generator = "confirmation_token_sequence"
     )
 
     private Long id;
