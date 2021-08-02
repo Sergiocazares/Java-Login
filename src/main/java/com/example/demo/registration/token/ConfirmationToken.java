@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 
@@ -25,8 +22,14 @@ public class ConfirmationToken {
     )
 
     private Long id;
+
+    @Column(nullable = false)
     private String token;
+
+    @Column(nullable = false)
     private LocalDateTime createdAt;
+
+    @Column(nullable = false)
     private LocalDateTime expiredAt;
     private LocalDateTime confirmAt;
 
