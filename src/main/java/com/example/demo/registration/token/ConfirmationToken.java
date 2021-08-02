@@ -4,6 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import java.time.LocalDateTime;
 
 
@@ -11,6 +15,14 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 public class ConfirmationToken {
+
+    @SequenceGenerator(
+            name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1
+    )
+    @Id
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE, generator = "student_sequence"
+    )
 
     private Long id;
     private String token;
