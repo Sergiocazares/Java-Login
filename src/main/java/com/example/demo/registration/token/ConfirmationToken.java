@@ -1,5 +1,6 @@
 package com.example.demo.registration.token;
 
+import com.example.demo.appuser.AppUser;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -33,7 +34,9 @@ public class ConfirmationToken {
     private LocalDateTime expiresAt;
     private LocalDateTime confirmAt;
 
-    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, LocalDateTime confirmAt){
+    private AppUser appUser;
+
+    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, LocalDateTime confirmAt, AppUser appUser){
         this.token = token;
         this.createdAt = createdAt;
         this.expiresAt = expiredAt;
