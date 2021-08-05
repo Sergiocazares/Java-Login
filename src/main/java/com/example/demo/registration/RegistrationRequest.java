@@ -32,4 +32,7 @@ public class RegistrationRequest {
 
     public Object getLastName() {
     }
+
+    public Object getPassword() {
+    }
 }
