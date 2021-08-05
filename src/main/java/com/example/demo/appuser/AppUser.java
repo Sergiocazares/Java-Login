@@ -42,7 +42,7 @@ public class AppUser implements UserDetails {
     public AppUser(Long id, String name, String username, String email, String password, AppUserRole appUserRole, Boolean locked, Boolean enabled) {
         this.id = id;
         this.name = null;
-        this.username = lastName;
+        this.username = username;
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
