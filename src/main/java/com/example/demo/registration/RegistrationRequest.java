@@ -13,8 +13,8 @@ public class RegistrationRequest {
 
     private final String firstName;
     private final String lastName;
-    private final String email;
-    private final String password;
+    private String email = null;
+    private String password = null;
     public String getLastName;
 
     public RegistrationRequest(String firstName, String lastName) {
@@ -25,14 +25,18 @@ public class RegistrationRequest {
     }
 
     public String getEmail() {
+        return null;
     }
 
     public Object getFirstName() {
+        return null;
     }
 
     public Object getLastName() {
+        return null;
     }
 
     public Object getPassword() {
+        return null;
     }
 }
