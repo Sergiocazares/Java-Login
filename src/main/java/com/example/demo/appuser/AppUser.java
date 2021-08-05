@@ -60,6 +60,10 @@ public class AppUser implements UserDetails {
     public AppUser(Object firstName, Object lastName, String email, Object password, AppUserRole user) {
     }
 
+    public AppUser() {
+
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority(appUserRole.name());
