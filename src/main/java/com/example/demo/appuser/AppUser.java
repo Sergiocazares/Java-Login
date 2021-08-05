@@ -33,7 +33,7 @@ public class AppUser implements UserDetails {
     private String firstName;
     private String lastName;
     private String email;
-    private final String password;
+    private String password;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked = false;
