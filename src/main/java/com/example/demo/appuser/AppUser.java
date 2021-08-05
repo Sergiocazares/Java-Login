@@ -57,6 +57,9 @@ public class AppUser implements UserDetails {
         this.password = password;
     }
 
+    public AppUser(Object firstName, Object lastName, String email, Object password, AppUserRole user) {
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority(appUserRole.name());
