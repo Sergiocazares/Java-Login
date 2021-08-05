@@ -20,8 +20,8 @@ import java.util.Collections;
 
 public class AppUser implements UserDetails {
 
-    private final Object name;
-    private final String username;
+    private Object name;
+    private String username;
     @SequenceGenerator(
             name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1
     )
