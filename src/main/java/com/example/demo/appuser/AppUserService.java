@@ -1,5 +1,6 @@
 package com.example.demo.appuser;
 
+import com.example.demo.registration.token.ConfirmationToken;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -38,6 +39,7 @@ public class AppUserService implements UserDetailsService {
         appUserRepository.save(appUser);
 
         // TODO: Send confirmation token
+        ConfirmationToken token = new ConfirmationToken()
 
         return "";
     }

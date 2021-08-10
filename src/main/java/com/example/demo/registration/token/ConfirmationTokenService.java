@@ -11,7 +11,7 @@ public class ConfirmationTokenService {
     private ConfirmationTokenRepository confirmationTokenRepository;
 
     public void saveConfirmationToken(ConfirmationToken token){
-
+    confirmationTokenRepository.save(token);
     }
 
 }
