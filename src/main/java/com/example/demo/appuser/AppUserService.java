@@ -8,6 +8,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.UUID;
+
 @Service
 @AllArgsConstructor
 public class AppUserService implements UserDetailsService {
@@ -38,8 +41,9 @@ public class AppUserService implements UserDetailsService {
 
         appUserRepository.save(appUser);
 
+        String token = UUID.randomUUID().toString();
         // TODO: Send confirmation token
-        ConfirmationToken token = new ConfirmationToken()
+        ConfirmationToken confirmationToken = new ConfirmationToken(token, LocalDateTime.now(), LocalDateTime.now().plusMinutes(15), appUser);
 
         return "";
     }
